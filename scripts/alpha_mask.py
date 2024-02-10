@@ -27,7 +27,7 @@ if AlphaMaskGlobals.extension_enabled:
 
 class MaskAlphaScript(scripts.Script):
     def title(self):
-        return 'Mask Alpha'
+        return 'Alpha Mask'
 
     def ui(self, is_img2img):
         return []
