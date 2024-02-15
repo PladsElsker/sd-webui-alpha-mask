@@ -15,7 +15,8 @@ def highjack_processing_process_images_inner():
         if not AlphaMaskGlobals.extension_enabled:
             return res
         
-        res.images.extend(AlphaMaskGlobals.additional_images)
+        amount_of_images = len(AlphaMaskGlobals.additional_images)
+        res.images[amount_of_images:amount_of_images] = AlphaMaskGlobals.additional_images[:]
         return res
 
     processing.process_images_inner = functools.partial(highjacked_func, original_function=processing.process_images_inner)
@@ -33,7 +34,8 @@ class MaskAlphaScript(scripts.Script):
         return []
 
     def show(self, is_img2img):
-        return False
+        AlphaMaskGlobals.additional_images = []
+        return scripts.AlwaysVisible if is_img2img else False
 
     def postprocess_batch_list(self, *_, **__):
         if not AlphaMaskGlobals.extension_enabled:
