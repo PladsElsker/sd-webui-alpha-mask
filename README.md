@@ -6,4 +6,4 @@ This can be useful when you want to add the image as a new layer in your favorit
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/4ff8ce12-063d-458f-9e34-be4450ac6aef)
 
 > This extension won't show additional images in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs.  
-> You might need to download the image with the top right `download` button. `left click -> copy image` converts the transparent pixels to black for me, probably a gradio bug. 
+> You might need to download the image with the top right `download` button. `left click -> copy image` converts the transparent pixels to black for me, which is probably a gradio bug. 
