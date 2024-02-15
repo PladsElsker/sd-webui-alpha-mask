@@ -11,4 +11,4 @@ It also won't save them on your hard drive.
 
 You might need to download images with the top right `download` button:  
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/39d8aabf-5d39-477b-9348-dc9b311b2bd3)  
-Doing `left click -> copy image` converts the transparent pixels to black for me, which I assume is a gradio bug.  
+Doing `right click -> copy image` converts the transparent pixels to black for me, which I assume is a gradio bug.  
