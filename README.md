@@ -7,4 +7,4 @@ This can be useful when you want to add the image as a new layer in your favorit
 
 > This extension won't show additional images in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs.  
 > It also won't save them on your hard drive.  
-> You might need to download the image with the top right `download` button. `left click -> copy image` converts the transparent pixels to black for me, which is probably a gradio bug.  
+> You might need to download images with the top right `download` button. `left click -> copy image` converts the transparent pixels to black for me, which is probably a gradio bug.  
