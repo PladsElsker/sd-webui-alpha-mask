@@ -1,29 +1,9 @@
-import functools
 from PIL import Image
 import numpy as np
 
 from modules import processing, scripts
 
-from lib_alpha_mask.one_time_callable import one_time_callable
 from lib_alpha_mask.globals import AlphaMaskGlobals
-
-
-@one_time_callable
-def highjack_processing_process_images_inner():
-    def highjacked_func(*args, original_function, **kwargs):
-        res = original_function(*args, **kwargs)
-        if not AlphaMaskGlobals.extension_enabled:
-            return res
-        
-        amount_of_images = len(AlphaMaskGlobals.additional_images)
-        res.images[amount_of_images:amount_of_images] = AlphaMaskGlobals.additional_images[:]
-        return res
-
-    processing.process_images_inner = functools.partial(highjacked_func, original_function=processing.process_images_inner)
-
-
-if AlphaMaskGlobals.extension_enabled:
-    highjack_processing_process_images_inner()
 
 
 class MaskAlphaScript(scripts.Script):
@@ -55,3 +35,10 @@ class MaskAlphaScript(scripts.Script):
         inverted_mask = Image.fromarray(255 - np.array(overlay.getchannel("A")))
         image.putalpha(inverted_mask)
         AlphaMaskGlobals.additional_images.append(image)
+
+    def postprocess(self, _, res):
+        if not AlphaMaskGlobals.extension_enabled:
+            return
+
+        amount_of_images = len(AlphaMaskGlobals.additional_images)
+        res.images[amount_of_images:amount_of_images] = AlphaMaskGlobals.additional_images[:]
