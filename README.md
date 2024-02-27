@@ -6,7 +6,7 @@ This can be useful when you want to add the image as a new layer in your favorit
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/4ff8ce12-063d-458f-9e34-be4450ac6aef)
 
 ## Features / Won't Implement / Won't Fix
-This extension won't show additional images in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs.  
+This extension won't show additional images in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs (doesn't make sense).  
 It also won't save them on your hard drive.  
 
 You might need to download images with the top right `download` button:  
