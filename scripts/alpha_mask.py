@@ -27,9 +27,12 @@ class MaskAlphaScript(scripts.Script):
         if not AlphaMaskGlobals.extension_enabled:
             return
 
+        if not p.overlay_images:
+            return
+
         i = p.batch_index
         overlay = p.overlay_images[i]
-        image = processing.apply_overlay(pp.image, p.paste_to, i, p.overlay_images)
+        image, _ = processing.apply_overlay(pp.image, p.paste_to, p.overlay_images[i])
 
         image = image.convert('RGBA')
         inverted_mask = Image.fromarray(255 - np.array(overlay.getchannel("A")))
