@@ -7,7 +7,7 @@ This can be useful for example when you want to add the image as a new layer in 
 
 ## Features / Won't Implement / Won't Fix
 - This extension won't show additional images in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs (doesn't make sense).  
-- It also won't save them on your hard drive.  
+- It also won't save additional images on your hard drive.  
 - You might need to download images with the top right `download` button:  
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/39d8aabf-5d39-477b-9348-dc9b311b2bd3)  
 Doing `right click -> copy image` converts the transparent pixels to black for me, which is clipboard quirk on windows.  
