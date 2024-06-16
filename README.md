@@ -10,4 +10,4 @@ This can be useful for example when you want to add the image as a new layer in 
 - Additional images are not saved to your harddrive.  
 - You might need to download images with the top right `download` button:  
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/39d8aabf-5d39-477b-9348-dc9b311b2bd3)  
-Doing `right click -> copy image` converts the transparent pixels to black for me, which is clipboard quirk on windows.  
+Doing `right click -> copy image` converts the transparent pixels to black for me, which is a clipboard quirk on windows.  
