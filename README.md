@@ -23,7 +23,7 @@ where $$min_{col}$$ chooses the smallest pixel-wise value in the channels.
 Once $$A$$ is known, we can compute back the correctly bounded scaled values for $$C_1'$$:  
 $$C_1' = C_2 + \frac{C_1 - C_2}{A}$$  
 
-We then apply the mask $$A$$ to $$C_1'$$, and return the result in the viewport. 
+We then apply the mask $$A$$ to $$C_1'$$, and return the result to the viewport. 
 
 ## Features / Won't Implement / Won't Fix
 - Additional images won't be shown in the `txt2img`, `img2img -> img2img` and `img2img -> sketch` tabs because it wouldn't make sense.  
