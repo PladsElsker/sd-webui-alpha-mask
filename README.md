@@ -18,7 +18,7 @@ $$C_f = C_1 A + C_2 \left( 1 - A \right)$$, where
 We consider that after a generation, we have $$C_f = C_1$$, with $$A = 1$$.  
 The key is to modify $$C_1$$ in a way that allows solving for $$A \neq 1$$:  
 $$A = min_{col} \left( \frac{C_f - C_2}{C_1' - C_2} \right), A \in \left[0, 1\right], C_{1}' \in \left[0; 255\right] $$,  
-where $$min_{col}$$ chooses the smallest pixel-wise value in the channels.  
+where $$min_{col}$$ chooses the smallest pixel-wise value in the channel dimension.  
   
 Once $$A$$ is known, we can compute back the correctly bounded scaled values for $$C_1'$$:  
 $$C_1' = C_2 + \frac{C_1 - C_2}{A}$$  
