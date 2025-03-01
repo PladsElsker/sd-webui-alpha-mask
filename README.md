@@ -5,7 +5,7 @@ This can be useful for example when you want to add the image as a new layer in 
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/059a9457-0c9c-4d36-a2b1-b23dbfd2a0cf)
 ![image](https://github.com/John-WL/sd-webui-alpha-mask/assets/34081873/4ff8ce12-063d-458f-9e34-be4450ac6aef)
 
-## Minimal delta mask
+## Minimal Delta Mask
 Unlike shown in the above example, the extension now uses a patch conversion mechanism that extracts the minimal delta from the original image, where the transparency for each pixel value is as high as possible.  
   
 The conversion can be explained with the mask overlay equation for a 2 layer canvas (it's a simple weighted sum):  
